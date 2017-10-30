@@ -1,0 +1,123 @@
+
+
+html {
+        font-size: 14px;
+        font-size: 87.5%;
+        }    
+         
+body{
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        overflow: hidden;}
+
+
+
+#map { 
+        position:absolute;
+        top:0px;
+        left:0px;
+        width: 100vw; 
+        height: 100vh; 
+        z-index: 0;
+        }  
+
+        
+#suche{
+    position:absolute;
+    top:10px;
+    right:10px;
+    width:200px;
+    background-color: rgba(238,238,238,0.6);
+    
+}
+
+
+#selector{
+    position:absolute;
+        top:80px;
+        right:10px;
+    width:200px;
+    background-color: rgba(238,238,238,0.6);
+    
+}
+
+label {width:inherit;
+}
+
+
+        .legend {
+        font-family: arial, sans-serif;
+        color:black;
+        font-size: 12px; 
+        position: fixed;
+        left: 10px;
+        bottom: 10px;
+        height: 85%;
+        width: 150px;
+        z-index: 1000;
+        background-color: rgba(238,238,238,0.6);
+        }
+
+
+#legend{visibility: visible}
+
+
+#legend-inner {
+        position: fixed;
+        left: 30px;
+        bottom: 20px;
+        z-index: 1001;
+        pointer-events: none;
+        height: 82%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        }
+
+#legend-inner .gradient {
+        opacity: 0.8;
+        width: 20px;
+    
+    background: -webkit-linear-gradient(bottom, powderblue 0%,gray 1%,purple 5%,indigo 10%,blue 25%,green 50%,yellow 60%,orange 70%,red 80%,brown 90%,maroon 100%);
+    
+    background: linear-gradient(to top, powderblue 0%,gray 1%,purple 5%,indigo 10%,blue 25%,green 50%,yellow 60%,orange 70%,red 80%,brown 90%,maroon 100%);
+    
+    position: relative;
+        }
+
+#legend-inner .gradient .limit {
+        height: 2px;
+        width: 42px;
+        background-color: #d50000;
+        position: absolute;
+        left: -10px;
+        bottom: calc(40% - 1px);
+        }
+
+#legend-inner .labels {
+        width: 150px;
+        position: relative;
+        }
+
+#legend-inner .labels .label {
+        position: absolute;
+        -webkit-transform: translateY(50%);
+        transform: translateY(50%);
+        }
+
+#legend-inner .labels .label:before {
+        content: '\2013   ';
+        }
+
+
+
+.leaflet-pane > svg .d3-overlay path{
+             pointer-events: fill;}
+
+
+
+img.leaflet-tile{
+             filter:  grayscale(85%) saturate(150%) hue-rotate(60deg) contrast(90%) brightness(110%);
+            -webkit-filter:    grayscale(85%) saturate(150%) hue-rotate(60deg) contrast(90%) brightness(110%);      }      
+      
